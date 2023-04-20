@@ -1,0 +1,14 @@
+@mixin font-face($font-family, $font-weight, $font-style, $filename-base) {
+  @font-face {
+    font-family: '#{$font-family}';
+    font-weight: #{$font-weight};
+    font-style: #{$font-style};
+    src: url('#{$filename-base}.ttf') format('truetype'),
+         url('#{$filename-base}.otf') format('opentype');
+  }
+}
+
+@include font-face('NanumSquare', 800, 'normal', './../font/nanum-square/NanumSquareEB');
+@include font-face('NanumSquare', 700, 'normal', './../font/nanum-square/NanumSquareB');
+@include font-face('NanumSquare', 400, 'normal', './../font/nanum-square/NanumSquareR');
+@include font-face('NanumSquare', 300, 'normal', './../font/nanum-square/NanumSquareL');

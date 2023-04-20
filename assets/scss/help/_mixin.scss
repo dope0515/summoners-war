@@ -1,0 +1,90 @@
+//가상 선택자 아이콘 초기값
+@mixin iconDefault($width,$height,$url,$format:"png") { 
+    content: '';
+    width: $width;
+    height: $height;
+    background-image: url('./assets/images/#{$url}.#{format}');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// 말줄임 효과
+@mixin ellipsis($line: 1) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+
+//이미지 스트라이트 포지션
+$bg-position: (
+  btnGreen: -0.8rem -0.8rem,
+  btnOrange: -0.8rem -16rem,
+  downLoad: -63.4rem -24rem,
+  hamBtn: -63.4rem -33rem,
+);
+
+$button-size: (
+  btnGreen: (
+    width: 46rem,
+    height: 14rem
+  ),
+  btnOrange: (
+    width: 46rem,
+    height: 14rem
+  ),
+  downLoad: (
+    width: 3.5rem,
+    height: 4rem
+  ),
+  hamBtn: (
+    width: 3.5rem,
+    height: 3rem
+  )
+);
+
+@mixin imgSprite($button-type) {
+  $bg-position-value: null;
+  $button-width: null;
+  $button-height: null;
+  
+  @if map-has-key($bg-position, $button-type) {
+    $bg-position-value: map-get($bg-position, $button-type);
+  } @else {
+    @warn 'Invalid button type: #{$button-type}.';
+  }
+  
+  @if map-has-key($button-size, $button-type) {
+    $button-size-value: map-get($button-size, $button-type);
+    $button-width: map-get($button-size-value, width);
+    $button-height: map-get($button-size-value, height);
+  } @else {
+    @warn 'Invalid button type: #{$button-type}.';
+  }
+  
+  width: $button-width;
+  height: $button-height;
+  background-image: url('./../images/common/sprite_set.png');
+  background-position: $bg-position-value;
+  background-repeat: no-repeat;
+}
+
+//미디어 쿼리 (반응형)
+$devices: (
+  mobile: 510px,
+  tablet: 768px,
+  desktop: 1280px
+);
+
+@mixin mq($device) {
+    @if map-has-key($devices, $device) {
+      $device-width: map-get($devices, $device);
+      @media screen and (max-width: #{$device-width}) {
+        @content;
+      }
+    } @else {
+      @warn 'Invalid breakpoint: #{$device}.';
+    }
+  }
