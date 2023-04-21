@@ -22,6 +22,7 @@
 $bg-position: (
   btnGreen: -0.8rem -0.8rem,
   btnOrange: -0.8rem -16rem,
+  btnRed: -0.8rem -31rem,
   downLoad: -63.4rem -24rem,
   hamBtn: -63.4rem -33rem,
 );
@@ -33,6 +34,10 @@ $button-size: (
   ),
   btnOrange: (
     width: 46rem,
+    height: 14rem
+  ),
+  btnRed: (
+    width: 100%,
     height: 14rem
   ),
   downLoad: (

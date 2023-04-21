@@ -1,5 +1,180 @@
 @use '../help/mixin' as *;
 
 main {
-    
+    section {
+        position: relative;
+        .sec-inner {
+            max-width: 64rem;
+            margin: 0 auto;
+            // 섹션 다이틀 스타일
+            .sec-tit {
+                text-align: center;
+                h4 {
+                    font-family: "protipo", sans-serif;
+                    font-size: 5rem;
+                    font-weight: 700;
+                    margin-bottom: 1.6rem;
+                }
+                strong {
+                    display: inline-block;
+                    font-size: 2.8rem;
+                    font-weight: 400;
+                    margin-bottom: 1.4rem;
+                }
+                p {
+                    font-size: 2rem;
+                    font-weight: 400;
+                    margin-bottom: 4rem;
+                }
+            }
+            .con-box {
+                &.video {
+                    position: relative;
+                    .video-wrap {
+                        width: 100%; padding-bottom: 56.25%;
+                        iframe {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                }
+                .event-list {
+                    max-width: 60rem;
+                    margin: 0 auto;
+                    li {
+                        margin-bottom: 2rem;
+                        border: 1px solid #bdc5c3;
+                        .img-box {
+                            overflow: hidden;
+                            img {
+                                display: block;
+                                max-width: 100%;
+                                height: auto;
+                                margin: 0 auto;
+                                transition: all 0.3s;
+                            }
+                        }
+                        .desc {
+                            text-align: center;
+                            padding: 2.5rem 2rem;
+                            h5,strong {
+                                font-size: 2.4rem;
+                                font-weight: 700;
+                            }
+                            strong {
+                                display: inline-block;
+                                color: #FFFFFF;
+                                margin-bottom: 1rem;
+                            }
+                            p {
+                                font-size: 2rem;
+                                font-weight: 400;
+                                color: #FFFFFF;
+                            }
+                        }
+                        &:nth-child(1) {
+                            .desc {
+                                background-color: #2d1563;
+                                h5 {
+                                    color: #ec17ff;
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            .desc {
+                                background-color: #2c1402;
+                                h5 {
+                                    color: #ffff00;
+                                }
+                            }
+                        }
+                        &:nth-child(3) {
+                            margin-bottom: 0;
+                            .desc {
+                                background-color: #270b8e;
+                                h5 {
+                                    color: #00ffff;
+                                }
+                            }
+                        }
+                        &:hover {
+                            .img-box {
+                                img {
+                                    transform: scale(1.05);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & + .sec-inner {
+                margin-top: 6rem;
+            }
+        }
+        &.main {
+            background-image: url('./../images/main/main_bg.png');
+            background-position: center center;
+            background-size: cover;
+        }
+        &:not(.main) {
+            padding: 6rem 2rem 4rem;
+        }
+        //section01 INFINITE FUN
+        &.sec01 {
+            background-image: url('./../images/main/brush01.png');
+            background-size: cover;
+            background-position: left bottom;
+            .sec-inner {
+                .sec-tit {
+                    h4 {
+                        color: #009bff;
+                    }
+                }
+           }
+        }
+        //section02 INFINITE FUN
+        &.sec02 {
+            background-color: #cbf8ff;
+            .sec-inner {
+                .sec-tit {
+                    h4 {
+                        color: #01afa5;
+                    }
+                }
+                .link-list {
+                    max-width: 47rem;
+                    margin: 0 auto;
+                    position: relative;
+                    left: -0.2rem;
+                    li {
+                        position: relative;
+                        margin-bottom: 1.8rem;
+                        span {
+                            font-size: 2rem;
+                            font-weight: 400;
+                            color: #FFFFFF;
+                            transform: translateX(-50%);
+                            position: absolute;
+                            left: 50%;
+                            bottom: 2rem;
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        .btn {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            padding: 2rem;
+                            background: linear-gradient(0deg, rgba(209,18,17,1) 0%, rgba(233,53,0,1) 35%, rgba(255,84,71,1) 100%);
+                        }
+                    }
+                }
+           }
+        }
+    }
 }

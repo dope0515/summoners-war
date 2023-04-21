@@ -8,7 +8,9 @@
   }
 }
 
-@include font-face('NanumSquare', 800, 'normal', './../font/nanum-square/NanumSquareEB');
-@include font-face('NanumSquare', 700, 'normal', './../font/nanum-square/NanumSquareB');
-@include font-face('NanumSquare', 400, 'normal', './../font/nanum-square/NanumSquareR');
-@include font-face('NanumSquare', 300, 'normal', './../font/nanum-square/NanumSquareL');
+@include font-face('NanumBarunGothic', 700, 'normal', './../font/NanumBarunGothic/NanumBarunGothicBold');
+@include font-face('NanumBarunGothic', 400, 'normal', './../font/NanumBarunGothic/NanumBarunGothic');
+@include font-face('NanumBarunGothic', 300, 'normal', './../font/NanumBarunGothic/NanumBarunGothicLight');
+@include font-face('NanumBarunGothic', 300, 'normal', './../font/NanumBarunGothic/NanumBarunGothicUltraLight');
+
+@import url("https://use.typekit.net/qsw8dqt.css");
