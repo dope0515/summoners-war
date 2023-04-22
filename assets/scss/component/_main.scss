@@ -1,6 +1,9 @@
 @use '../help/mixin' as *;
 
 main {
+    .btn {
+        display: block;
+    }
     section {
         position: relative;
         .sec-inner {
@@ -118,6 +121,26 @@ main {
             background-image: url('./../images/main/main_bg.png');
             background-position: center center;
             background-size: cover;
+            .main-tit {
+                img {
+                    margin: 0 auto;
+                }
+                .link-btn-wrap {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+                    width: 100%;
+                    margin-top: 4rem;
+                    li { 
+                        a {
+                            img {
+                                max-width: 21rem;
+                            }
+                        }
+                    }
+                }
+            }
         }
         &:not(.main) {
             padding: 6rem 2rem 4rem;
@@ -137,11 +160,11 @@ main {
         }
         //section02 INFINITE FUN
         &.sec02 {
-            background-color: #cbf8ff;
+            background-color: #CBF8FF;
             .sec-inner {
                 .sec-tit {
                     h4 {
-                        color: #01afa5;
+                        color: #01AFA5;
                     }
                 }
                 .link-list {
@@ -165,16 +188,67 @@ main {
                             margin-bottom: 0;
                         }
                         .btn {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: 100%;
-                            padding: 2rem;
-                            background: linear-gradient(0deg, rgba(209,18,17,1) 0%, rgba(233,53,0,1) 35%, rgba(255,84,71,1) 100%);
+                            p {
+                                @include linkBtn('red');
+                            }
                         }
                     }
                 }
            }
+        }
+        //section03 INFINITE THANKS
+        &.sec03 {
+            background-color: #FFFFFF;
+            padding-bottom: 29.5rem;
+            .sec-inner {
+                .sec-tit {
+                    h4 {
+                        color: #01AFA5;
+                    }
+                }
+                .con-box {
+                    .link-list {
+                        li {
+                            text-align: center;
+                            margin-bottom: 5rem;
+                            strong {
+                                display: inline-block;
+                                font-size: 2.4rem;
+                                margin-bottom: 1.4rem;
+                            }
+                            p {
+                                font-size: 2rem;
+                                margin-bottom: 1.4rem;
+                            }
+                            &:nth-child(1) {
+                                strong {
+                                    color: #01AFA5;
+                                }
+                                .btn {
+                                    p {
+                                        @include linkBtn('green');
+                                    }
+                                }
+                            }
+                            &:nth-child(2) {
+                                background-color: #FDFFE3;
+                                padding: 3rem 2.8rem 2.4rem;
+                                strong {
+                                    color: #B32A00;
+                                }
+                                .btn {
+                                    p {
+                                        @include linkBtn('yellow');
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -10,7 +10,7 @@
 }
 
 // 말줄임 효과
-@mixin ellipsis($line: 1) {
+@mixin ellipsis($line) {
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -18,63 +18,75 @@
     -webkit-line-clamp: $line;
   }
 
-//이미지 스트라이트 포지션
-$bg-position: (
-  btnGreen: -0.8rem -0.8rem,
-  btnOrange: -0.8rem -16rem,
-  btnRed: -0.8rem -31rem,
-  downLoad: -63.4rem -24rem,
-  hamBtn: -63.4rem -33rem,
-);
-
-$button-size: (
-  btnGreen: (
-    width: 46rem,
-    height: 14rem
-  ),
-  btnOrange: (
-    width: 46rem,
-    height: 14rem
-  ),
-  btnRed: (
-    width: 100%,
-    height: 14rem
-  ),
-  downLoad: (
-    width: 3.5rem,
-    height: 4rem
-  ),
-  hamBtn: (
-    width: 3.5rem,
-    height: 3rem
-  )
-);
-
-@mixin imgSprite($button-type) {
-  $bg-position-value: null;
-  $button-width: null;
-  $button-height: null;
+  //링크버튼 Mixin
+  @mixin linkBtn($btnColor) {
+    //버튼 색상별 gradient 색상
+    $red: linear-gradient(180deg, rgba(255,84,71,1) 0%, rgba(233,53,0,1) 35%, rgba(209,18,17,1) 97%, rgba(214,18,94,1) 100%);
+    $green: linear-gradient(180deg, rgba(20,219,174,1) 0%, rgba(0,172,125,1) 35%, rgba(3,151,113,1) 97%, rgba(23,180,143,1) 100%);
+    $yellow: linear-gradient(180deg, rgba(238,188,18,1) 0%, rgba(222,141,0,1) 35%, rgba(213,115,1,1) 97%, rgba(227,152,24,1) 100%);
   
-  @if map-has-key($bg-position, $button-type) {
-    $bg-position-value: map-get($bg-position, $button-type);
-  } @else {
-    @warn 'Invalid button type: #{$button-type}.';
+    $bgColor: null;
+    $txtShadowColor: null;
+    $boxShadowColor: null;
+    $arrowColor: null;
+  
+    @if $btnColor == "red" {
+      $bgColor: $red;
+      $txtShadowColor: #7a0900;
+      $boxShadowColor: #7a0900;
+      $arrowColor: #7a0900;
+    } @else if $btnColor == "green" {
+      $bgColor: $green;
+      $txtShadowColor: #00694c;
+      $boxShadowColor: #00694c;
+      $arrowColor: #00694c;
+    } @else if $btnColor == "yellow" {
+      $bgColor: $yellow;
+      $txtShadowColor: #904b00;
+      $boxShadowColor: #904b00;
+      $arrowColor: #904b00;
+    } @else {
+      @error "Invalid button color specified. Please choose from 'red', 'green', or 'yellow'.";
+    }
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    max-width: 45.6rem;
+    margin: 0 auto;
+    text-shadow: 0 0 1rem $txtShadowColor;
+    padding: 5rem 2rem 4.9rem;
+    border-radius: 25rem;
+    box-shadow: 0px 8px 0px 0px $boxShadowColor;
+    position: relative;
+  
+    background: $bgColor;
+  
+    &::after, &::before {
+      content: '';
+      width: 3rem;
+      height: 0.4rem;
+      border-radius: 0.4rem;
+      background-color: $arrowColor;
+      position: absolute;
+      transform-origin: right;
+      right: 4.3rem;
+    }
+  
+    &::after {
+      transform: translateY(-50%) rotate(45deg);
+      top: calc(50% + 0.1rem);
+    }
+  
+    &::before {
+      transform: translateY(-50%) rotate(-45deg);
+      top: calc(50% - 0.1rem);
+    }
   }
   
-  @if map-has-key($button-size, $button-type) {
-    $button-size-value: map-get($button-size, $button-type);
-    $button-width: map-get($button-size-value, width);
-    $button-height: map-get($button-size-value, height);
-  } @else {
-    @warn 'Invalid button type: #{$button-type}.';
-  }
-  
-  width: $button-width;
-  height: $button-height;
-  background-image: url('./../images/common/sprite_set.png');
-  background-position: $bg-position-value;
-  background-repeat: no-repeat;
-}
 
 //미디어 쿼리 (반응형)
 $devices: (

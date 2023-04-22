@@ -25,10 +25,10 @@
             align-items: center;
             gap: 2.7rem;
             .download {
-                @include imgSprite('downLoad');
+                // @include imgSprite('downLoad');
             }
             .ham-btn {
-                @include imgSprite('hamBtn');
+                // @include imgSprite('hamBtn');
             }
         }
     }
