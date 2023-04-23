@@ -1,5 +1,18 @@
 @use '../help/mixin' as *;
 
+//애니메이션 효과
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
 main {
     .btn {
         display: block;
@@ -123,14 +136,17 @@ main {
                 margin-top: 6rem;
             }
         }
-        &.main {
+        &.sec-main {
             background-image: url('./../images/main/main_bg.png');
             background-position: center center;
             background-size: cover;
             padding: 1rem 2rem 6.7rem;
+            overflow: hidden;
             .main-tit {
-                img {
+                > img {
                     margin: 0 auto;
+                    position: relative;
+                    z-index: 2;
                 }
                 .store-link-wrap {
                     display: flex;
@@ -140,6 +156,8 @@ main {
                     width: 100%;
                     margin-top: 4rem;
                     padding-bottom: 33rem;
+                    position: relative;
+                    z-index: 2;
                     li { 
                         a {
                             img {
@@ -148,6 +166,44 @@ main {
                                 height: auto;
                             }
                         }
+                    }
+                }
+                .character {
+                    width: 100%;
+                    max-width: 67.6rem;
+                    transform: translateX(-50%);
+                    position: absolute;
+                    left: 50%;
+                    bottom: 4rem;
+                    z-index: 0;
+                    img {
+                        max-width: 80%;
+                        position: absolute;
+                        z-index: 0;
+                        animation: float 3s infinite ease-in-out;
+                    }
+                    .lushen {
+                        margin: 0 auto;
+                        position: relative;
+                        z-index: 1;
+                        animation-delay: 0s;
+                    }
+                    .pollen {
+                        width: 100%;
+                        top: 26%;
+                        left: -4%;
+                        z-index: 1;
+                        animation-delay: 0.5s;
+                    }
+                    .cloud01 {
+                        top: -6%;
+                        right: -6%;
+                        animation-delay: 1s;
+                    }
+                    .cloud02 {
+                        bottom: 26%;
+                        left: -6%;
+                        animation-delay: 1.5s;
                     }
                 }
                 .link-btn-wrap {
@@ -171,7 +227,7 @@ main {
                 }
             }
         }
-        &:not(.main) {
+        &:not(.sec-main) {
             padding: 6rem 2rem 4rem;
         }
         //section01 INFINITE FUN

@@ -171,6 +171,35 @@ legend {
   height: auto;
 }
 
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 main .btn {
   display: block;
 }
@@ -293,16 +322,19 @@ main section .sec-inner .con-box .event-list li:hover .img-box img {
 main section .sec-inner + .sec-inner {
   margin-top: 6rem;
 }
-main section.main {
+main section.sec-main {
   background-image: url("./../images/main/main_bg.png");
   background-position: center center;
   background-size: cover;
   padding: 1rem 2rem 6.7rem;
+  overflow: hidden;
 }
-main section.main .main-tit img {
+main section.sec-main .main-tit > img {
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
-main section.main .main-tit .store-link-wrap {
+main section.sec-main .main-tit .store-link-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,16 +348,62 @@ main section.main .main-tit .store-link-wrap {
   width: 100%;
   margin-top: 4rem;
   padding-bottom: 33rem;
+  position: relative;
+  z-index: 2;
 }
-main section.main .main-tit .store-link-wrap li a img {
+main section.sec-main .main-tit .store-link-wrap li a img {
   max-width: 21rem;
   width: 100%;
   height: auto;
 }
-main section.main .main-tit .link-btn-wrap li:nth-child(1) {
+main section.sec-main .main-tit .character {
+  width: 100%;
+  max-width: 67.6rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  bottom: 4rem;
+  z-index: 0;
+}
+main section.sec-main .main-tit .character img {
+  max-width: 80%;
+  position: absolute;
+  z-index: 0;
+  -webkit-animation: float 3s infinite ease-in-out;
+          animation: float 3s infinite ease-in-out;
+}
+main section.sec-main .main-tit .character .lushen {
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+main section.sec-main .main-tit .character .pollen {
+  width: 100%;
+  top: 26%;
+  left: -4%;
+  z-index: 1;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+main section.sec-main .main-tit .character .cloud01 {
+  top: -6%;
+  right: -6%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+main section.sec-main .main-tit .character .cloud02 {
+  bottom: 26%;
+  left: -6%;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) {
   margin-bottom: 4.3rem;
 }
-main section.main .main-tit .link-btn-wrap li:nth-child(1) .btn p {
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,7 +427,7 @@ main section.main .main-tit .link-btn-wrap li:nth-child(1) .btn p {
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(20, 219, 174)), color-stop(35%, rgb(0, 172, 125)), color-stop(97%, rgb(3, 151, 113)), to(rgb(23, 180, 143)));
   background: linear-gradient(180deg, rgb(20, 219, 174) 0%, rgb(0, 172, 125) 35%, rgb(3, 151, 113) 97%, rgb(23, 180, 143) 100%);
 }
-main section.main .main-tit .link-btn-wrap li:nth-child(1) .btn p::after, main section.main .main-tit .link-btn-wrap li:nth-child(1) .btn p::before {
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p::after, main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p::before {
   content: "";
   width: 3rem;
   height: 0.4rem;
@@ -360,17 +438,17 @@ main section.main .main-tit .link-btn-wrap li:nth-child(1) .btn p::after, main s
           transform-origin: right;
   right: 4.3rem;
 }
-main section.main .main-tit .link-btn-wrap li:nth-child(1) .btn p::after {
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p::after {
   -webkit-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
   top: calc(50% + 0.1rem);
 }
-main section.main .main-tit .link-btn-wrap li:nth-child(1) .btn p::before {
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p::before {
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
   top: calc(50% - 0.1rem);
 }
-main section.main .main-tit .link-btn-wrap li:nth-child(2) .btn p {
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,7 +472,7 @@ main section.main .main-tit .link-btn-wrap li:nth-child(2) .btn p {
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(238, 188, 18)), color-stop(35%, rgb(222, 141, 0)), color-stop(97%, rgb(213, 115, 1)), to(rgb(227, 152, 24)));
   background: linear-gradient(180deg, rgb(238, 188, 18) 0%, rgb(222, 141, 0) 35%, rgb(213, 115, 1) 97%, rgb(227, 152, 24) 100%);
 }
-main section.main .main-tit .link-btn-wrap li:nth-child(2) .btn p::after, main section.main .main-tit .link-btn-wrap li:nth-child(2) .btn p::before {
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p::after, main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p::before {
   content: "";
   width: 3rem;
   height: 0.4rem;
@@ -405,17 +483,17 @@ main section.main .main-tit .link-btn-wrap li:nth-child(2) .btn p::after, main s
           transform-origin: right;
   right: 4.3rem;
 }
-main section.main .main-tit .link-btn-wrap li:nth-child(2) .btn p::after {
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p::after {
   -webkit-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
   top: calc(50% + 0.1rem);
 }
-main section.main .main-tit .link-btn-wrap li:nth-child(2) .btn p::before {
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p::before {
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
   top: calc(50% - 0.1rem);
 }
-main section:not(.main) {
+main section:not(.sec-main) {
   padding: 6rem 2rem 4rem;
 }
 main section.sec01 {
