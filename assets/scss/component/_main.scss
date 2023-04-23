@@ -6,6 +6,7 @@ main {
     }
     section {
         position: relative;
+        background-repeat: no-repeat;
         .sec-inner {
             max-width: 64rem;
             margin: 0 auto;
@@ -17,6 +18,11 @@ main {
                     font-size: 5rem;
                     font-weight: 700;
                     margin-bottom: 1.6rem;
+                    &::before {
+                        @include iconDefault(6.3rem, 3.2rem, 'icon_infinite_blue');
+                        display: block;
+                        margin: 0 auto;
+                    }
                 }
                 strong {
                     display: inline-block;
@@ -121,21 +127,44 @@ main {
             background-image: url('./../images/main/main_bg.png');
             background-position: center center;
             background-size: cover;
+            padding: 1rem 2rem 6.7rem;
             .main-tit {
                 img {
                     margin: 0 auto;
                 }
-                .link-btn-wrap {
+                .store-link-wrap {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     gap: 2rem;
                     width: 100%;
                     margin-top: 4rem;
+                    padding-bottom: 33rem;
                     li { 
                         a {
                             img {
                                 max-width: 21rem;
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+                .link-btn-wrap {
+                    li {
+                        &:nth-child(1) {
+                            margin-bottom: 4.3rem;
+                            .btn {
+                                p {
+                                    @include linkBtn('green')
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            .btn {
+                                p {
+                                    @include linkBtn('yellow')
+                                }
                             }
                         }
                     }
@@ -161,10 +190,17 @@ main {
         //section02 INFINITE FUN
         &.sec02 {
             background-color: #CBF8FF;
+            background-image: url('./../images/main/brush02.png');
+            background-position: 0 center;
             .sec-inner {
                 .sec-tit {
                     h4 {
                         color: #01AFA5;
+                        &::before {
+                            @include iconDefault(6.3rem, 3.2rem, 'icon_infinite_green');
+                            display: block;
+                            margin: 0 auto;
+                        }
                     }
                 }
                 .link-list {
@@ -194,16 +230,41 @@ main {
                         }
                     }
                 }
+                & + .sec-inner {
+                    .sec-tit {
+                        h4 {
+                            color: #6E03FF;
+                            &::before {
+                                @include iconDefault(6.3rem, 3.2rem, 'icon_infinite_purple');
+                                display: block;
+                                margin: 0 auto;
+                            }
+                        }
+                        strong {
+                            color: #6E03FF;
+                        }
+                    }
+                }
            }
         }
         //section03 INFINITE THANKS
         &.sec03 {
             background-color: #FFFFFF;
+            background-image: url('./../images/main/brush03.png');
+            background-position: 0 bottom;
             padding-bottom: 29.5rem;
             .sec-inner {
                 .sec-tit {
                     h4 {
                         color: #01AFA5;
+                        &::before {
+                            @include iconDefault(6.3rem, 3.2rem, 'icon_infinite_green');
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+                    p {
+                        margin-bottom: 10rem;
                     }
                 }
                 .con-box {
@@ -218,7 +279,13 @@ main {
                             }
                             p {
                                 font-size: 2rem;
-                                margin-bottom: 1.4rem;
+                                margin-bottom: 5rem;
+                            }
+                            img {
+                                display: block;
+                                max-width: 100%;
+                                height: auto;
+                                margin: 0 auto;
                             }
                             &:nth-child(1) {
                                 strong {
@@ -235,6 +302,10 @@ main {
                                 padding: 3rem 2.8rem 2.4rem;
                                 strong {
                                     color: #B32A00;
+                                }
+                                img {
+                                    padding-left: 9rem;
+                                    margin-bottom: 1.4rem
                                 }
                                 .btn {
                                     p {

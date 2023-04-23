@@ -1,9 +1,10 @@
 //가상 선택자 아이콘 초기값
-@mixin iconDefault($width,$height,$url,$format:"png") { 
+@mixin iconDefault($width,$height,$url) { 
     content: '';
+    display: inline-block;
     width: $width;
     height: $height;
-    background-image: url('./assets/images/#{$url}.#{format}');
+    background-image: url('./../images/icon/#{$url}.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -87,12 +88,28 @@
     }
   }
   
+//이미지 스트라이트 포지션
+$bg-position: (
+  btnGreen: -0.8rem -0.8rem,
+  btnOrange: -0.8rem -16rem,
+  downLoad: -63.4rem -24rem,
+  hamBtn: -63.4rem -33rem,
+);
+
+$button-size: (
+  downLoad: (
+    width: 3.5rem,
+    height: 4rem
+  ),
+  hamBtn: (
+    width: 3.5rem,
+    height: 3rem
+  )
+);
 
 //미디어 쿼리 (반응형)
 $devices: (
-  mobile: 510px,
-  tablet: 768px,
-  desktop: 1280px
+  mobile: 450px,
 );
 
 @mixin mq($device) {
