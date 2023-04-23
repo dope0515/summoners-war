@@ -307,8 +307,11 @@ main {
         &.sec03 {
             background-color: #FFFFFF;
             background-image: url('./../images/main/brush03.png');
-            background-position: 0 bottom;
+            background-position: center 27vw;
             padding-bottom: 29.5rem;
+            @include mq('mobile') {
+                background-position: center 27vw;
+            }
             .sec-inner {
                 .sec-tit {
                     h4 {

@@ -613,8 +613,13 @@ main section.sec02 .sec-inner + .sec-inner .sec-tit strong {
 main section.sec03 {
   background-color: #FFFFFF;
   background-image: url("./../images/main/brush03.png");
-  background-position: 0 bottom;
+  background-position: center 27vw;
   padding-bottom: 29.5rem;
+}
+@media screen and (max-width: 450px) {
+  main section.sec03 {
+    background-position: center 27vw;
+  }
 }
 main section.sec03 .sec-inner .sec-tit h4 {
   color: #01AFA5;
