@@ -87,7 +87,7 @@ a:hover, a:active, a:visited {
   text-decoration: none;
 }
 
-fieldset {
+fieldset, iframe {
   border: 0;
 }
 

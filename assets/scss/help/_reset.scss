@@ -18,7 +18,7 @@ p { width:0; height:0; font-size:0; line-height:0; top:0; left:-9999999px; }
 a { display: inline-block; text-decoration: none; cursor: pointer; 
     &:hover, &:active, &:visited { text-decoration: none; }
 } 
-fieldset { border: 0; } 
+fieldset,iframe { border: 0; } 
 address { font-style: normal; } 
 li, ul, dl { list-style: none; } 
 button { background-color: transparent; border: 0; cursor: pointer; } 
