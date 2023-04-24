@@ -151,7 +151,8 @@ main {
                     position: relative;
                     z-index: 2;
                     @include mq('mobile') {
-                        width: 80%
+                        width: 84%;
+                        left: 1rem;
                     }
                 }
             }
