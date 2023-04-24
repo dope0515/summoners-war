@@ -435,15 +435,15 @@ main section.sec-main .link-btn-wrap li:nth-child(1) .btn p {
   -webkit-box-shadow: 0px 8px 0px 0px #00694c;
           box-shadow: 0px 8px 0px 0px #00694c;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(20, 219, 174)), color-stop(35%, rgb(0, 172, 125)), color-stop(97%, rgb(3, 151, 113)), to(rgb(23, 180, 143)));
-  background: linear-gradient(180deg, rgb(20, 219, 174) 0%, rgb(0, 172, 125) 35%, rgb(3, 151, 113) 97%, rgb(23, 180, 143) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(20, 219, 174)), color-stop(35%, rgb(0, 190, 138)), color-stop(97%, rgb(0, 152, 111)), to(rgb(20, 175, 139)));
+  background: linear-gradient(180deg, rgb(20, 219, 174) 0%, rgb(0, 190, 138) 35%, rgb(0, 152, 111) 97%, rgb(20, 175, 139) 100%);
 }
 main section.sec-main .link-btn-wrap li:nth-child(1) .btn p::after, main section.sec-main .link-btn-wrap li:nth-child(1) .btn p::before {
   content: "";
-  width: 3rem;
+  width: 2rem;
   height: 0.4rem;
   border-radius: 0.4rem;
-  background-color: #00694c;
+  background-color: #6fffd8;
   position: absolute;
   -webkit-transform-origin: right;
           transform-origin: right;
@@ -477,8 +477,8 @@ main section.sec-main .link-btn-wrap li:nth-child(1) .btn span::after {
   background-image: url("./../images/common/speech_bubble.png");
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-transform: translate(-50%, -42%);
-          transform: translate(-50%, -42%);
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -510,7 +510,7 @@ main section.sec-main .link-btn-wrap li:nth-child(2) .btn p {
 }
 main section.sec-main .link-btn-wrap li:nth-child(2) .btn p::after, main section.sec-main .link-btn-wrap li:nth-child(2) .btn p::before {
   content: "";
-  width: 3rem;
+  width: 2rem;
   height: 0.4rem;
   border-radius: 0.4rem;
   background-color: #904b00;
@@ -547,8 +547,8 @@ main section.sec-main .link-btn-wrap li:nth-child(2) .btn span::after {
   background-image: url("./../images/common/speech_bubble.png");
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-transform: translate(-50%, -42%);
-          transform: translate(-50%, -42%);
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -634,7 +634,7 @@ main section.sec02 .sec-inner .link-list li .btn p {
 }
 main section.sec02 .sec-inner .link-list li .btn p::after, main section.sec02 .sec-inner .link-list li .btn p::before {
   content: "";
-  width: 3rem;
+  width: 2rem;
   height: 0.4rem;
   border-radius: 0.4rem;
   background-color: #7a0900;
@@ -739,15 +739,15 @@ main section.sec03 .sec-inner .con-box .link-list li:nth-child(1) .btn p {
   -webkit-box-shadow: 0px 8px 0px 0px #00694c;
           box-shadow: 0px 8px 0px 0px #00694c;
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(20, 219, 174)), color-stop(35%, rgb(0, 172, 125)), color-stop(97%, rgb(3, 151, 113)), to(rgb(23, 180, 143)));
-  background: linear-gradient(180deg, rgb(20, 219, 174) 0%, rgb(0, 172, 125) 35%, rgb(3, 151, 113) 97%, rgb(23, 180, 143) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(20, 219, 174)), color-stop(35%, rgb(0, 190, 138)), color-stop(97%, rgb(0, 152, 111)), to(rgb(20, 175, 139)));
+  background: linear-gradient(180deg, rgb(20, 219, 174) 0%, rgb(0, 190, 138) 35%, rgb(0, 152, 111) 97%, rgb(20, 175, 139) 100%);
 }
 main section.sec03 .sec-inner .con-box .link-list li:nth-child(1) .btn p::after, main section.sec03 .sec-inner .con-box .link-list li:nth-child(1) .btn p::before {
   content: "";
-  width: 3rem;
+  width: 2rem;
   height: 0.4rem;
   border-radius: 0.4rem;
-  background-color: #00694c;
+  background-color: #6fffd8;
   position: absolute;
   -webkit-transform-origin: right;
           transform-origin: right;
@@ -771,7 +771,8 @@ main section.sec03 .sec-inner .con-box .link-list li:nth-child(1) .btn span {
   position: absolute;
   top: -5.5rem;
   z-index: 2;
-  right: 2rem;
+  top: -2.5rem;
+  right: 1.5rem;
 }
 main section.sec03 .sec-inner .con-box .link-list li:nth-child(1) .btn span::after {
   content: "";
@@ -781,8 +782,8 @@ main section.sec03 .sec-inner .con-box .link-list li:nth-child(1) .btn span::aft
   background-image: url("./../images/common/speech_bubble.png");
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-transform: translate(-50%, -42%);
-          transform: translate(-50%, -42%);
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -825,7 +826,7 @@ main section.sec03 .sec-inner .con-box .link-list li:nth-child(2) .btn p {
 }
 main section.sec03 .sec-inner .con-box .link-list li:nth-child(2) .btn p::after, main section.sec03 .sec-inner .con-box .link-list li:nth-child(2) .btn p::before {
   content: "";
-  width: 3rem;
+  width: 2rem;
   height: 0.4rem;
   border-radius: 0.4rem;
   background-color: #904b00;
@@ -852,7 +853,8 @@ main section.sec03 .sec-inner .con-box .link-list li:nth-child(2) .btn span {
   position: absolute;
   top: -1.5rem;
   z-index: 2;
-  left: -3rem;
+  top: -3.5rem;
+  left: 0;
 }
 main section.sec03 .sec-inner .con-box .link-list li:nth-child(2) .btn span::after {
   content: "";
@@ -862,8 +864,8 @@ main section.sec03 .sec-inner .con-box .link-list li:nth-child(2) .btn span::aft
   background-image: url("./../images/common/speech_bubble.png");
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-transform: translate(-50%, -42%);
-          transform: translate(-50%, -42%);
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
   position: absolute;
   top: 50%;
   left: 50%;

@@ -370,7 +370,8 @@ main {
                                     }
                                     span {
                                         @include speechBubble(#00976E,-5.5rem);
-                                        right: 2rem;
+                                        top: -2.5rem;
+                                        right: 1.5rem;
                                     }
                                 }
                             }
@@ -390,7 +391,8 @@ main {
                                     }
                                     span {
                                         @include speechBubble(#D32D00, -1.5rem);
-                                        left: -3rem;
+                                        top: -3.5rem;
+                                        left: 0;
                                     }
                                 }
                             }

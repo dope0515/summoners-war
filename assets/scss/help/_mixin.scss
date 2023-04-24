@@ -36,7 +36,7 @@
     background-image: url('./../images/common/speech_bubble.png');
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translate(-50%, -42%);
+    transform: translate(-50%, -40%);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -48,7 +48,7 @@
 @mixin linkBtn($btnColor) {
   //버튼 색상별 gradient 색상
   $red: linear-gradient(180deg, rgba(255,84,71,1) 0%, rgba(233,53,0,1) 35%, rgba(209,18,17,1) 97%, rgba(214,18,94,1) 100%);
-  $green: linear-gradient(180deg, rgba(20,219,174,1) 0%, rgba(0,172,125,1) 35%, rgba(3,151,113,1) 97%, rgba(23,180,143,1) 100%);
+  $green: linear-gradient(180deg, rgba(20,219,174,1) 0%, rgba(0,190,138,1) 35%, rgba(0,152,111,1) 97%, rgba(20,175,139,1) 100%);
   $yellow: linear-gradient(180deg, rgba(238,188,18,1) 0%, rgba(222,141,0,1) 35%, rgba(213,115,1,1) 97%, rgba(227,152,24,1) 100%);
 
   $bgColor: null;
@@ -65,7 +65,7 @@
     $bgColor: $green;
     $txtShadowColor: #00694c;
     $boxShadowColor: #00694c;
-    $arrowColor: #00694c;
+    $arrowColor: #6fffd8;
   } @else if $btnColor == "yellow" {
     $bgColor: $yellow;
     $txtShadowColor: #904b00;
@@ -93,7 +93,7 @@
 
   &::after, &::before {
     content: '';
-    width: 3rem;
+    width: 2rem;
     height: 0.4rem;
     border-radius: 0.4rem;
     background-color: $arrowColor;
