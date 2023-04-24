@@ -323,8 +323,9 @@ main {
         &.sec03 {
             background-color: #FFFFFF;
             background-image: url('./../images/main/brush03.png');
-            background-position: center calc(100% + 5rem);
+            background-position: center 22rem;
             padding-bottom: 29.5rem;
+            background-size: auto 100%;
             .sec-inner {
                 .sec-tit {
                     h4 {
