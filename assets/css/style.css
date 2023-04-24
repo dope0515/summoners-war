@@ -559,8 +559,8 @@ main section:not(.sec-main) {
 }
 main section.sec01 {
   background-image: url("./../images/main/brush01.png");
-  background-size: cover;
-  background-position: left bottom;
+  background-size: auto;
+  background-position: calc(50% - 20rem) 10rem;
 }
 main section.sec01 .sec-inner .sec-tit h4 {
   color: #009bff;
