@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/css/style.css"> <!--style.css-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" ><!--aos.css-->
     <title>서머너즈워: 천공의 아레나 | 컴투스</title>
-
+    <script src="./assets/js/jquery-2.2.4.min.js"></script> <!--jquery-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--Aos.js-->
 </head>
 <body>
@@ -54,6 +54,7 @@
                 <div class="character" data-aos="fade-in" data-aos-delay="600" data-aos-duration="1000">
                     <img class="lushen" src="./assets/images/main/lushen.png" alt="루센">
                     <img class="pollen" src="./assets/images/main/pollen.png" alt="꽃가루">
+                    <img class="ballon" src="./assets/images/main/ballon.png" alt="꽃가루">
                     <img class="cloud01" src="./assets/images/main/cloud01.png" alt="구름1">
                     <img class="cloud02" src="./assets/images/main/cloud02.png" alt="구름2">
                 </div>
@@ -61,11 +62,13 @@
                     <li data-aos="fade-up" data-aos-duration="1000">
                         <a class="btn" href="javascript:void(0)" title="미니 게임 도전 !" target="_blank">
                             <p>미니 게임 도전 !</p>
+                            <span>EVENT</span>
                         </a>
                     </li>
                     <li data-aos="fade-up" data-aos-duration="1000">
                         <a class="btn" href="javascript:void(0)" title="THANK YOU PAGE" target="_blank">
                             <p>THANK YOU PAGE</p>
+                            <span>COUPON</span>
                         </a>
                     </li>
                 </ul>
@@ -170,6 +173,7 @@
                             <img src="./assets/images/main/reward_box.png" alt="보상상자">
                             <a class="btn" href="javascript:void(0)" target="_blank" title="미니 게임 도전!">
                                 <p>미니 게임 도전!</p>
+                                <span>EVENT</span>
                             </a>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
@@ -178,6 +182,7 @@
                             <img src="./assets/images/main/signature.png" alt="서명서">
                             <a class="btn" href="javascript:void(0)" target="_blank" title="THANK YOU PAGE">
                                 <p>THANK YOU PAGE</p>
+                                <span>COUPON!</span>
                             </a>
                         </li>
                     </ol>
@@ -188,7 +193,13 @@
     </main>
     <!--//main-->
     <script>
-        AOS.init();
+        $(document).ready(function() {
+            AOS.init();
+        });
+        //새로고침 시 data-aos-offset 틀어짐 현상을 수정하기 위해 refresh 시키는 함수
+        $(window).on('load', function() {
+            AOS.refresh();
+        });
     </script>
 </body>
 </html>

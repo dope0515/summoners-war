@@ -202,6 +202,9 @@ legend {
 }
 main .btn {
   display: block;
+  max-width: 45.6rem;
+  margin: 0 auto;
+  position: relative;
 }
 main section {
   position: relative;
@@ -380,28 +383,36 @@ main section.sec-main .main-tit .character .lushen {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
+main section.sec-main .main-tit .character .ballon {
+  top: 0;
+  left: 0;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
 main section.sec-main .main-tit .character .pollen {
-  width: 100%;
   top: 26%;
   left: -4%;
   z-index: 1;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 main section.sec-main .main-tit .character .cloud01 {
   top: -6%;
   right: -6%;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 main section.sec-main .main-tit .character .cloud02 {
   bottom: 26%;
   left: -6%;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+main section.sec-main .main-tit .link-btn-wrap {
+  margin: 0 auto;
 }
 main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) {
-  margin-bottom: 4.3rem;
+  margin-bottom: 5rem;
 }
 main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p {
   display: -webkit-box;
@@ -448,6 +459,31 @@ main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p::before {
           transform: translateY(-50%) rotate(-45deg);
   top: calc(50% - 0.1rem);
 }
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn span {
+  font-family: "protipo", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #00976E;
+  position: absolute;
+  top: -5.5rem;
+  z-index: 2;
+  right: 2rem;
+}
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn span::after {
+  content: "";
+  display: block;
+  width: 20.8rem;
+  height: 10rem;
+  background-image: url("./../images/common/speech_bubble.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform: translate(-50%, -42%);
+          transform: translate(-50%, -42%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
 main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -492,6 +528,31 @@ main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p::before {
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
   top: calc(50% - 0.1rem);
+}
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn span {
+  font-family: "protipo", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #D32D00;
+  position: absolute;
+  top: -1.5rem;
+  z-index: 2;
+  left: -3rem;
+}
+main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn span::after {
+  content: "";
+  display: block;
+  width: 20.8rem;
+  height: 10rem;
+  background-image: url("./../images/common/speech_bubble.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform: translate(-50%, -42%);
+          transform: translate(-50%, -42%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
 }
 main section:not(.sec-main) {
   padding: 6rem 2rem 4rem;
@@ -613,13 +674,8 @@ main section.sec02 .sec-inner + .sec-inner .sec-tit strong {
 main section.sec03 {
   background-color: #FFFFFF;
   background-image: url("./../images/main/brush03.png");
-  background-position: center 27vw;
+  background-position: center calc(100% + 5rem);
   padding-bottom: 29.5rem;
-}
-@media screen and (max-width: 450px) {
-  main section.sec03 {
-    background-position: center 27vw;
-  }
 }
 main section.sec03 .sec-inner .sec-tit h4 {
   color: #01AFA5;
@@ -706,6 +762,31 @@ main section.sec03 .sec-inner .con-box .link-list li:nth-child(1) .btn p::before
           transform: translateY(-50%) rotate(-45deg);
   top: calc(50% - 0.1rem);
 }
+main section.sec03 .sec-inner .con-box .link-list li:nth-child(1) .btn span {
+  font-family: "protipo", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #00976E;
+  position: absolute;
+  top: -5.5rem;
+  z-index: 2;
+  right: 2rem;
+}
+main section.sec03 .sec-inner .con-box .link-list li:nth-child(1) .btn span::after {
+  content: "";
+  display: block;
+  width: 20.8rem;
+  height: 10rem;
+  background-image: url("./../images/common/speech_bubble.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform: translate(-50%, -42%);
+          transform: translate(-50%, -42%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
 main section.sec03 .sec-inner .con-box .link-list li:nth-child(2) {
   background-color: #FDFFE3;
   padding: 3rem 2.8rem 2.4rem;
@@ -761,6 +842,31 @@ main section.sec03 .sec-inner .con-box .link-list li:nth-child(2) .btn p::before
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
   top: calc(50% - 0.1rem);
+}
+main section.sec03 .sec-inner .con-box .link-list li:nth-child(2) .btn span {
+  font-family: "protipo", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #D32D00;
+  position: absolute;
+  top: -1.5rem;
+  z-index: 2;
+  left: -3rem;
+}
+main section.sec03 .sec-inner .con-box .link-list li:nth-child(2) .btn span::after {
+  content: "";
+  display: block;
+  width: 20.8rem;
+  height: 10rem;
+  background-image: url("./../images/common/speech_bubble.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform: translate(-50%, -42%);
+          transform: translate(-50%, -42%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
 }
 main section.sec03 .sec-inner .con-box .link-list li:last-child {
   margin-bottom: 0;

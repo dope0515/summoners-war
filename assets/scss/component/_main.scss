@@ -16,6 +16,9 @@
 main {
     .btn {
         display: block;
+        max-width: 45.6rem;
+        margin: 0 auto;
+        position: relative;
     }
     section {
         position: relative;
@@ -188,38 +191,51 @@ main {
                         z-index: 1;
                         animation-delay: 0s;
                     }
+                    .ballon {
+                        top: 0;
+                        left: 0;
+                        animation-delay: 0.5s;
+                    }
                     .pollen {
-                        width: 100%;
                         top: 26%;
                         left: -4%;
                         z-index: 1;
-                        animation-delay: 0.5s;
+                        animation-delay: 1s;
                     }
                     .cloud01 {
                         top: -6%;
                         right: -6%;
-                        animation-delay: 1s;
+                        animation-delay: 1.5s;
                     }
                     .cloud02 {
                         bottom: 26%;
                         left: -6%;
-                        animation-delay: 1.5s;
+                        animation-delay: 2s;
                     }
                 }
                 .link-btn-wrap {
+                    margin: 0 auto;
                     li {
                         &:nth-child(1) {
-                            margin-bottom: 4.3rem;
+                            margin-bottom: 5rem;
                             .btn {
                                 p {
-                                    @include linkBtn('green')
+                                    @include linkBtn('green');
+                                }
+                                span {
+                                    @include speechBubble(#00976E,-5.5rem);
+                                    right: 2rem;
                                 }
                             }
                         }
                         &:nth-child(2) {
                             .btn {
                                 p {
-                                    @include linkBtn('yellow')
+                                    @include linkBtn('yellow');
+                                }
+                                span {
+                                    @include speechBubble(#D32D00, -1.5rem);
+                                    left: -3rem;
                                 }
                             }
                         }
@@ -307,11 +323,8 @@ main {
         &.sec03 {
             background-color: #FFFFFF;
             background-image: url('./../images/main/brush03.png');
-            background-position: center 27vw;
+            background-position: center calc(100% + 5rem);
             padding-bottom: 29.5rem;
-            @include mq('mobile') {
-                background-position: center 27vw;
-            }
             .sec-inner {
                 .sec-tit {
                     h4 {
@@ -354,6 +367,10 @@ main {
                                     p {
                                         @include linkBtn('green');
                                     }
+                                    span {
+                                        @include speechBubble(#00976E,-5.5rem);
+                                        right: 2rem;
+                                    }
                                 }
                             }
                             &:nth-child(2) {
@@ -369,6 +386,10 @@ main {
                                 .btn {
                                     p {
                                         @include linkBtn('yellow');
+                                    }
+                                    span {
+                                        @include speechBubble(#D32D00, -1.5rem);
+                                        left: -3rem;
                                     }
                                 }
                             }
