@@ -337,7 +337,7 @@ main section.sec-main .main-tit > img {
   position: relative;
   z-index: 2;
 }
-main section.sec-main .main-tit .store-link-wrap {
+main section.sec-main .store-link-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,67 +354,67 @@ main section.sec-main .main-tit .store-link-wrap {
   position: relative;
   z-index: 2;
 }
-main section.sec-main .main-tit .store-link-wrap li a img {
+main section.sec-main .store-link-wrap li a img {
   max-width: 21rem;
   width: 100%;
   height: auto;
 }
-main section.sec-main .main-tit .character {
+main section.sec-main .character {
   width: 100%;
   max-width: 67.6rem;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(-50%) !important;
+          transform: translateX(-50%) !important;
   position: absolute;
   left: 50%;
   bottom: 4rem;
   z-index: 0;
 }
-main section.sec-main .main-tit .character img {
+main section.sec-main .character img {
   max-width: 80%;
   position: absolute;
   z-index: 0;
   -webkit-animation: float 3s infinite ease-in-out;
           animation: float 3s infinite ease-in-out;
 }
-main section.sec-main .main-tit .character .lushen {
+main section.sec-main .character .lushen {
   margin: 0 auto;
   position: relative;
   z-index: 1;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
-main section.sec-main .main-tit .character .ballon {
+main section.sec-main .character .ballon {
   top: 0;
   left: 0;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
-main section.sec-main .main-tit .character .pollen {
+main section.sec-main .character .pollen {
   top: 26%;
   left: -4%;
   z-index: 1;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
-main section.sec-main .main-tit .character .cloud01 {
+main section.sec-main .character .cloud01 {
   top: -6%;
   right: -6%;
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
-main section.sec-main .main-tit .character .cloud02 {
+main section.sec-main .character .cloud02 {
   bottom: 26%;
   left: -6%;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
-main section.sec-main .main-tit .link-btn-wrap {
+main section.sec-main .link-btn-wrap {
   margin: 0 auto;
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) {
+main section.sec-main .link-btn-wrap li:nth-child(1) {
   margin-bottom: 5rem;
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p {
+main section.sec-main .link-btn-wrap li:nth-child(1) .btn p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,7 +438,7 @@ main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p {
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(20, 219, 174)), color-stop(35%, rgb(0, 172, 125)), color-stop(97%, rgb(3, 151, 113)), to(rgb(23, 180, 143)));
   background: linear-gradient(180deg, rgb(20, 219, 174) 0%, rgb(0, 172, 125) 35%, rgb(3, 151, 113) 97%, rgb(23, 180, 143) 100%);
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p::after, main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p::before {
+main section.sec-main .link-btn-wrap li:nth-child(1) .btn p::after, main section.sec-main .link-btn-wrap li:nth-child(1) .btn p::before {
   content: "";
   width: 3rem;
   height: 0.4rem;
@@ -449,17 +449,17 @@ main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p::after, ma
           transform-origin: right;
   right: 4.3rem;
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p::after {
+main section.sec-main .link-btn-wrap li:nth-child(1) .btn p::after {
   -webkit-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
   top: calc(50% + 0.1rem);
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn p::before {
+main section.sec-main .link-btn-wrap li:nth-child(1) .btn p::before {
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
   top: calc(50% - 0.1rem);
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn span {
+main section.sec-main .link-btn-wrap li:nth-child(1) .btn span {
   font-family: "protipo", sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
@@ -469,7 +469,7 @@ main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn span {
   z-index: 2;
   right: 2rem;
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn span::after {
+main section.sec-main .link-btn-wrap li:nth-child(1) .btn span::after {
   content: "";
   display: block;
   width: 20.8rem;
@@ -484,7 +484,7 @@ main section.sec-main .main-tit .link-btn-wrap li:nth-child(1) .btn span::after 
   left: 50%;
   z-index: -1;
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p {
+main section.sec-main .link-btn-wrap li:nth-child(2) .btn p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -508,7 +508,7 @@ main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p {
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(238, 188, 18)), color-stop(35%, rgb(222, 141, 0)), color-stop(97%, rgb(213, 115, 1)), to(rgb(227, 152, 24)));
   background: linear-gradient(180deg, rgb(238, 188, 18) 0%, rgb(222, 141, 0) 35%, rgb(213, 115, 1) 97%, rgb(227, 152, 24) 100%);
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p::after, main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p::before {
+main section.sec-main .link-btn-wrap li:nth-child(2) .btn p::after, main section.sec-main .link-btn-wrap li:nth-child(2) .btn p::before {
   content: "";
   width: 3rem;
   height: 0.4rem;
@@ -519,17 +519,17 @@ main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p::after, ma
           transform-origin: right;
   right: 4.3rem;
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p::after {
+main section.sec-main .link-btn-wrap li:nth-child(2) .btn p::after {
   -webkit-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
   top: calc(50% + 0.1rem);
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn p::before {
+main section.sec-main .link-btn-wrap li:nth-child(2) .btn p::before {
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
   top: calc(50% - 0.1rem);
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn span {
+main section.sec-main .link-btn-wrap li:nth-child(2) .btn span {
   font-family: "protipo", sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
@@ -539,7 +539,7 @@ main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn span {
   z-index: 2;
   left: -3rem;
 }
-main section.sec-main .main-tit .link-btn-wrap li:nth-child(2) .btn span::after {
+main section.sec-main .link-btn-wrap li:nth-child(2) .btn span::after {
   content: "";
   display: block;
   width: 20.8rem;

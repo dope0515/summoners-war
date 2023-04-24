@@ -151,30 +151,31 @@ main {
                     position: relative;
                     z-index: 2;
                 }
-                .store-link-wrap {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 2rem;
-                    width: 100%;
-                    margin-top: 4rem;
-                    padding-bottom: 33rem;
-                    position: relative;
-                    z-index: 2;
-                    li { 
-                        a {
-                            img {
-                                max-width: 21rem;
-                                width: 100%;
-                                height: auto;
-                            }
+            }
+            .store-link-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                width: 100%;
+                margin-top: 4rem;
+                padding-bottom: 33rem;
+                position: relative;
+                z-index: 2;
+                li { 
+                    a {
+                        img {
+                            max-width: 21rem;
+                            width: 100%;
+                            height: auto;
                         }
                     }
                 }
-                .character {
-                    width: 100%;
+            }
+            .character {
+                width: 100%;
                     max-width: 67.6rem;
-                    transform: translateX(-50%);
+                    transform: translateX(-50%) !important;
                     position: absolute;
                     left: 50%;
                     bottom: 4rem;
@@ -212,31 +213,30 @@ main {
                         left: -6%;
                         animation-delay: 2s;
                     }
-                }
-                .link-btn-wrap {
-                    margin: 0 auto;
-                    li {
-                        &:nth-child(1) {
-                            margin-bottom: 5rem;
-                            .btn {
-                                p {
-                                    @include linkBtn('green');
-                                }
-                                span {
-                                    @include speechBubble(#00976E,-5.5rem);
-                                    right: 2rem;
-                                }
+            }
+            .link-btn-wrap {
+                margin: 0 auto;
+                li {
+                    &:nth-child(1) {
+                        margin-bottom: 5rem;
+                        .btn {
+                            p {
+                                @include linkBtn('green');
+                            }
+                            span {
+                                @include speechBubble(#00976E,-5.5rem);
+                                right: 2rem;
                             }
                         }
-                        &:nth-child(2) {
-                            .btn {
-                                p {
-                                    @include linkBtn('yellow');
-                                }
-                                span {
-                                    @include speechBubble(#D32D00, -1.5rem);
-                                    left: -3rem;
-                                }
+                    }
+                    &:nth-child(2) {
+                        .btn {
+                            p {
+                                @include linkBtn('yellow');
+                            }
+                            span {
+                                @include speechBubble(#D32D00, -1.5rem);
+                                left: -3rem;
                             }
                         }
                     }
