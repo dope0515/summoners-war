@@ -337,6 +337,11 @@ main section.sec-main .main-tit > img {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 450px) {
+  main section.sec-main .main-tit > img {
+    width: 80%;
+  }
+}
 main section.sec-main .store-link-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -703,17 +708,28 @@ main section.sec03 .sec-inner .con-box .link-list li {
 main section.sec03 .sec-inner .con-box .link-list li strong {
   display: inline-block;
   font-size: 2.4rem;
+  font-weight: 700;
   margin-bottom: 1.4rem;
 }
 main section.sec03 .sec-inner .con-box .link-list li p {
   font-size: 2rem;
   margin-bottom: 5rem;
 }
+@media screen and (max-width: 450px) {
+  main section.sec03 .sec-inner .con-box .link-list li p {
+    margin-bottom: 2.5rem;
+  }
+}
 main section.sec03 .sec-inner .con-box .link-list li img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+}
+@media screen and (max-width: 450px) {
+  main section.sec03 .sec-inner .con-box .link-list li img {
+    width: 60%;
+  }
 }
 main section.sec03 .sec-inner .con-box .link-list li:nth-child(1) strong {
   color: #01AFA5;

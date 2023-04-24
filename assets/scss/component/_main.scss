@@ -150,6 +150,9 @@ main {
                     margin: 0 auto;
                     position: relative;
                     z-index: 2;
+                    @include mq('mobile') {
+                        width: 80%
+                    }
                 }
             }
             .store-link-wrap {
@@ -348,17 +351,24 @@ main {
                             strong {
                                 display: inline-block;
                                 font-size: 2.4rem;
+                                font-weight: 700;
                                 margin-bottom: 1.4rem;
                             }
                             p {
                                 font-size: 2rem;
                                 margin-bottom: 5rem;
+                                @include mq('mobile') {
+                                    margin-bottom: 2.5rem;
+                                }
                             }
                             img {
                                 display: block;
                                 max-width: 100%;
                                 height: auto;
                                 margin: 0 auto;
+                                @include mq('mobile') {
+                                    width: 60%
+                                }
                             }
                             &:nth-child(1) {
                                 strong {
@@ -383,7 +393,7 @@ main {
                                 }
                                 img {
                                     padding-left: 9rem;
-                                    margin-bottom: 1.4rem
+                                    margin-bottom: 1.4rem;
                                 }
                                 .btn {
                                     p {
