@@ -1,17 +1,5 @@
 @use '../help/mixin' as *;
-
-//애니메이션 효과
-@keyframes float {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+@use '../help/animate' as *;
 
 main {
     .btn {
@@ -149,10 +137,10 @@ main {
                 > img {
                     margin: 0 auto;
                     position: relative;
+                    left: 1rem;
                     z-index: 2;
                     @include mq('mobile') {
-                        width: 84%;
-                        left: 1rem;
+                        width: 84%;                        
                     }
                 }
             }

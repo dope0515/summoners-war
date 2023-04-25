@@ -335,12 +335,12 @@ main section.sec-main {
 main section.sec-main .main-tit > img {
   margin: 0 auto;
   position: relative;
+  left: 1rem;
   z-index: 2;
 }
 @media screen and (max-width: 450px) {
   main section.sec-main .main-tit > img {
     width: 84%;
-    left: 1rem;
   }
 }
 main section.sec-main .store-link-wrap {
